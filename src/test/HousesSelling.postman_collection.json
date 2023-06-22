@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "8f715164-3115-4608-afac-850d1c4650e6",
+		"name": "HousesSelling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26674601"
+	},
+	"item": [
+		{
+			"name": "Get all houses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/houses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one house",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/houses/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all agencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/agencies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one agency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/agencies/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agencies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new agency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agencyName\": \"Malificenta\",\r\n    \"phoneNumber\": \"+447813131398\",\r\n    \"website\": \"malificenta.com\",\r\n    \"email\": \"malificenta.property.com\",\r\n    \"housesDto\": [\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/agencies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update agency's info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 16,\r\n    \"agencyName\": \"Malificenta\",\r\n    \"phoneNumber\": \"+3333333333\",\r\n    \"website\": \"malificenta.com\",\r\n    \"email\": \"malificenta.property.com\",\r\n    \"housesDto\": [\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/agencies/16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agencies",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new house",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"region\": \"Minsk\",\r\n        \"localityType\": \"CITY\",\r\n        \"localityName\": \"Minsk\",\r\n        \"street\": \"Victory Park\",\r\n        \"houseNumber\": \"1\"\r\n    },\r\n    \"houseArea\": 133.0,\r\n    \"yearBuilt\": 2023,\r\n    \"floorCount\": 1,\r\n    \"price\": 450000.00,\r\n    \"realEstateAgency\": \"Malificenta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/houses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get new agency with new house",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/houses/19",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update house's info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"region\": \"Homel\",\r\n        \"localityType\": \"CITY\",\r\n        \"localityName\": \"Homel\",\r\n        \"street\": \"Victory Park\",\r\n        \"houseNumber\": \"1\"\r\n    },\r\n    \"houseArea\": 133.0,\r\n    \"yearBuilt\": 2023,\r\n    \"floorCount\": 1,\r\n    \"price\": 450000.00,\r\n    \"realEstateAgency\": \"Domus Barnett\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/houses/19",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete house",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/houses/19",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"houses",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete agency",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/agencies/16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agencies",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

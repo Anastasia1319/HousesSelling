@@ -26,6 +26,6 @@ public class RealEstateAgency {
     @Column(name = "email")
     private String email;
 
-    @OneToMany(mappedBy = "agencyId", cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "agencyId", cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     private List<House> houses;
 }

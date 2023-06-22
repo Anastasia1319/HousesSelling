@@ -33,7 +33,8 @@ public class House {
 
     @ManyToOne(cascade = {CascadeType.PERSIST,
             CascadeType.MERGE,
-            CascadeType.REFRESH})
+            CascadeType.REFRESH},
+            fetch = FetchType.LAZY)
     @JoinColumn(name = "real_estate_agency_id", nullable = false)
     private RealEstateAgency agencyId;
 }

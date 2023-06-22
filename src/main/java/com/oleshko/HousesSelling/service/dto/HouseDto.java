@@ -1,7 +1,6 @@
 package com.oleshko.HousesSelling.service.dto;
 
 import com.oleshko.HousesSelling.data.entity.HouseAddress;
-import com.oleshko.HousesSelling.data.entity.RealEstateAgency;
 import lombok.Data;
 
 import java.math.BigDecimal;
